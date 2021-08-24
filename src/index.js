@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import './fontello-3945db0e/css/fontello.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

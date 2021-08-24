@@ -1,12 +1,12 @@
-// import logo from './logo.svg';
-import './App.css';
+import Nav from './components/nav'
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="text-4xl font-black">Hello World</h1>
+    <div className="">
+        <Nav/>
     </div> 
   );
 }
 
+ 
 export default App;
