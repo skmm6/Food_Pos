@@ -3,10 +3,37 @@
     --color-primory: #EB966A;
     --color-primoryop: #eb956a42;
     --color-navitem: #EA7C69;
+    --color-bacdark: #252836,
+    ;
     /* ... */
+  }
+  .nav-icon {
+    transition: .8s ease;
   }
 
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+
+  .nav-active .bgroundnav {
+    @apply bg-bgnavitemgr bg-no-repeat bg-right bg-contain;
+  }
+
+  .nav-active .container-active{
+    @apply bg-navitem rounded-lg shadow-itemnav;
+  }
+
+ .nav-icon {
+    @apply text-primory text-2xl;
+  }
+  
+  .nav-active .nav-icon {
+    @apply text-white text-2xl;
+  }
+
+
+
+}

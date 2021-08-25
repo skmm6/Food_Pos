@@ -9,10 +9,11 @@ module.exports = {
         'primory': '#EB966A',
         'primoryop': '#eb956a42',
         'navitem': '#EA7C69',
+        'bacdark': '#252836',
       },
       backgroundImage: theme => ({
-        'bgnavitem': "url('./components/Pattern.png')",
-        'bgnavitemgr': "url('./components/Patterngr.svg')",
+        'bgnavitem': "url('./assets/img/Pattern.png')",
+        'bgnavitemgr': "url('./assets/img/Patterngr.svg')",
        }),
        boxShadow: {
         sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
