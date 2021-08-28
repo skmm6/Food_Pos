@@ -2,7 +2,20 @@ module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
   darkMode: false, // or 'media' or 'class'
   theme: {
-
+    fontFamily: {
+      'sans': ['Barlow', 'system-ui'],
+      'serif': ['ui-serif', 'Georgia'],
+      'mono': ['ui-monospace', 'SFMono-Regular'],
+      'display': ['Oswald'],
+      'body': ['"Open Sans"'],
+     },
+     placeholderColor: theme => theme('colors'),
+     placeholderColor: {
+      'primary': '#3490dc',
+      'secondary': '#ffed4a',
+      'danger': '#e3342f',
+      'in-gray':'#889898',
+     },
     extend: {
       colors: {
         'basedark': '#1F1D2B',
@@ -10,6 +23,8 @@ module.exports = {
         'primoryop': '#eb956a42',
         'navitem': '#EA7C69',
         'bacdark': '#252836',
+        't-gray': '#E0E6E9',
+        'in-gray': '#2D303E',
       },
       backgroundImage: theme => ({
         'bgnavitem': "url('./assets/img/Pattern.png')",
@@ -27,6 +42,14 @@ module.exports = {
         none: 'none',
         itemnav: '0px 8px 24px rgba(234, 124, 105, 0.32)',
       },
+      borderColor: theme => ({
+        ...theme('colors'),
+         DEFAULT: theme('colors.gray.300', 'currentColor'),
+        'primary': '#3490dc',
+        'secondary': '#ffed4a',
+        'danger': '#e3342f',
+        'input-gray': "#393C49",
+       }),
     },
   },
   variants: {

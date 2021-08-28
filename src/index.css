@@ -1,10 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&display=swap');
+
+.notscrollbar {
+  -ms-overflow-style: none; 
+  scrollbar-width: none;
+}
+.notscrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+
 :root {
     --color-basedark: #1F1D2B;
     --color-primory: #EB966A;
     --color-primoryop: #eb956a42;
     --color-navitem: #EA7C69;
-    --color-bacdark: #252836,
-    ;
+    --color-bacdark: #252836;
+    --color-t-gray: #E0E6E9;
+    --color-in-gray: #2D303E;
+
     /* ... */
   }
   .nav-icon {
