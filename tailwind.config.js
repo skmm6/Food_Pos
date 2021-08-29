@@ -25,6 +25,7 @@ module.exports = {
         'bacdark': '#252836',
         't-gray': '#E0E6E9',
         'in-gray': '#2D303E',
+        't-2-gray': '#ABBBC2',
       },
       backgroundImage: theme => ({
         'bgnavitem': "url('./assets/img/Pattern.png')",
@@ -50,6 +51,12 @@ module.exports = {
         'danger': '#e3342f',
         'input-gray': "#393C49",
        }),
+       height: {
+        xxxxxl: '650px',
+       },
+       minWidth: {
+        '192': '192px',
+       }
     },
   },
   variants: {
