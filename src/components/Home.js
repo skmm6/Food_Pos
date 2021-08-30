@@ -3,7 +3,15 @@ import search from '../assets/img/Base.svg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Dishсard from './Dishсard'
+import Dropdown from 'react-dropdown';
+import '../css/react-dropdown.css';
 
+
+const options = [
+    'Dine In', 'To Go', 'Delivery'
+  ];
+
+const defaultOption = options[0];
 
 export default function Home() {
     return (
@@ -31,12 +39,21 @@ export default function Home() {
                 <div>
                 <Tabs>
                     <TabList>
-                        <Tab>Title 1</Tab>
-                        <Tab>Title 2</Tab>
+                        <Tab>Hot Dishes</Tab>
+                        <Tab>Cold Dishes</Tab>
+                        <Tab>Soup</Tab>
+                        <Tab>Grill</Tab>
+                        <Tab>Appetizer</Tab>
+                        <Tab>Dessert</Tab>  
                     </TabList>
-
-                    <TabPanel className="">
-                        <div className="overflow-auto notscrollbar flex flex-wrap max-w-2xl h-xxxxxl mt-0 mb-0 ml-auto mr-auto gap-x-5 gap-y-5">
+                   <div className="flex  justify-between">
+                        <h3 className=" text-xl font-semibold leading-10 mb-10">
+                                Choose Dishes
+                        </h3>
+                        <Dropdown options={options}  value={defaultOption} placeholder="Dine In" />
+                   </div>
+                    <TabPanel>
+                        <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
                          <Dishсard/>
                          <Dishсard/>
@@ -104,12 +121,8 @@ export default function Home() {
                     </TabPanel>
                 </Tabs>
                 </div>
-                <div className="flex">
-                
-                </div>
-                <div></div>
             </div>
-            <div className="flex basedark w-96">
+            <div className="flex basedark w-1/4">
                 
             </div>
         </div>
