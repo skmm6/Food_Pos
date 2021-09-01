@@ -8,7 +8,7 @@ import '../css/react-dropdown.css';
 
 
 const options = [
-    'Dine In', 'To Go', 'Delivery'
+    'Dine In', 'To Go', 'Delivery',
   ];
 
 const defaultOption = options[0];
@@ -16,7 +16,7 @@ const defaultOption = options[0];
 export default function Home() {
     return (
         <div className=" flex text-white flex-grow">
-            <div className="flex bg-bacdark p-6 pb-0 flex-grow flex-col">
+            <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
                 <div className="flex">
                     <div className=" flex-grow ">
                         <h3 className=" text-3xl font-semibold leading-10">
@@ -50,10 +50,10 @@ export default function Home() {
                         <h3 className=" text-xl font-semibold leading-10 mb-10">
                                 Choose Dishes
                         </h3>
-                        <Dropdown options={options}  value={defaultOption} placeholder="Dine In" />
+                        <Dropdown options={options}  value={defaultOption} />
                    </div>
                     <TabPanel>
-                        <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                        <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">
                          <Dishсard/>
                          <Dishсard/>
                          <Dishсard/>
@@ -87,7 +87,143 @@ export default function Home() {
                     </TabPanel>    
                     
                     <TabPanel className="">
-                        <div className="overflow-auto notscrollbar flex flex-wrap max-w-2xl h-xxxxxl mt-0 mb-0 ml-auto mr-auto gap-x-5 gap-y-5">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel className="">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel className="">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel className="">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                         <Dishсard/>
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel className="">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
                          <Dishсard/>
                          <Dishсard/>
@@ -122,8 +258,13 @@ export default function Home() {
                 </Tabs>
                 </div>
             </div>
-            <div className="flex basedark w-1/4">
-                
+            <div className=" min-w-409 flex flex-col basedark p-6 bg-basedark rounded-l-md">
+                <h1 className=" mb-8  text-xl font-semibold leading-10">Orders #34562</h1>   
+                <div className="flex gap-x-2">
+                    <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5 bg-navitem text-white rounded-lg flex justify-center items-center">Dine In</button>
+                    <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5  text-navitem border-solid border border-input-gray rounded-lg flex justify-center items-center">To Go</button>
+                    <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5  text-navitem border-solid border border-input-gray rounded-lg flex justify-center items-center">Delivery</button>
+                </div>
             </div>
         </div>
     )

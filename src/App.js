@@ -11,7 +11,7 @@ import Notfound from './components/Notfound';
 function App() {
   return (
     <BrowserRouter>
-      <div className="container m-auto bg-bacdark rounded-xl flex h-screen">
+      <div className="  m-auto bg-bacdark rounded-2xl flex h-screen  overflow-hidden">
           <Nav/>
           <Switch>
               <Route exact path='/' component={Home}/>

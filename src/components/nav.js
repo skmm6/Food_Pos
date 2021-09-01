@@ -7,11 +7,11 @@ import {NavLink} from 'react-router-dom'
 
 function nav() {
     return (
-        <div className=" notscrollbar bg-basedark rounded-2xl self-stretch flex flex-col items-center pt-3 pb-3 w-24 overflow-hidden justify-between overflow-y-auto ">
+        <div className=" min-w-min notscrollbar bg-basedark rounded-2xl self-stretch flex flex-col items-center pt-2 pb-3 shadow-sm  justify-between overflow-y-auto ">
             <div className="bg-primoryop m-4 p-3 rounded-xl">
              <img src={logo} alt="Logo" />
             </div>
-            <nav className="flex flex-col gap-y-3">
+            <nav className="flex flex-col">
                 <NavLink exact to="/" activeClassName="nav-active"> <NavItem icon="icon-home nav-icon"/> </NavLink>  
                 <NavLink  activeClassName="nav-active" to="/discount"> <NavItem icon="icon-discount nav-icon"/> </NavLink>  
                 <NavLink  activeClassName="nav-active" to="/dashboard"> <NavItem icon="icon-dashboard nav-icon"/> </NavLink>

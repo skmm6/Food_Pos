@@ -43,6 +43,45 @@
   line-height: 140%;
 }
 
+.react-tabs__tab:focus {
+  box-shadow:none !important;
+  border-color: transparent !important;
+  outline: none !important;
+} 
+
+.react-tabs__tab:focus:after {
+  content: "" !important;
+  background-color: #EA7C69 !important;
+  border: 3px solid #EA7C69 !important;
+  position: absolute !important;
+  width: calc(100% - 16px) !important;
+  bottom: -1.5px !important;
+  left: 16px !important;
+  border-radius: 9999px !important;
+}
+
+.react-tabs__tab:first-child:focus:after {
+  content: "" !important;
+  background-color: #EA7C69 !important;
+  border: 3px solid #EA7C69 !important;
+  position: absolute !important;
+  width: calc(100%) !important;
+  bottom: -1.5px !important;
+  left: 0 !important;
+  border-radius: 9999px !important;
+}
+
+.react-tabs__tab:last-child:focus:after {
+  content: "" !important;
+  background-color: #EA7C69 !important;
+  border: 3px solid #EA7C69 !important;
+  position: absolute !important;
+  width: calc(100%) !important;
+  bottom: -1.5px !important;
+  left: 16px !important;
+  border-radius: 9999px !important;
+}
+
 
 
 .react-tabs__tab-list .react-tabs__tab:hover{
@@ -75,6 +114,7 @@
   left: 0;
   border-radius: 9999px;
 }
+
 .react-tabs__tab-list .react-tabs__tab--selected:last-child::after{
   content: "";
   background-color: #EA7C69;
@@ -121,7 +161,7 @@
 @layer utilities {
 
   .nav-active .bgroundnav {
-    @apply bg-bgnavitemgr bg-no-repeat bg-right bg-contain;
+    @apply bg-bgnavitemgr overflow-visible bg-no-repeat bg-right relative left-1 bg-contain;
   }
 
   .nav-active .container-active{
