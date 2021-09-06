@@ -7,8 +7,8 @@ import {NavLink} from 'react-router-dom'
 
 function nav() {
     return (
-        <div className=" min-w-min notscrollbar bg-basedark rounded-2xl self-stretch flex flex-col items-center pt-2 pb-3 shadow-sm  justify-between overflow-y-auto ">
-            <div className="bg-primoryop m-4 p-3 rounded-xl">
+        <div className=" min-w-104 notscrollbar bg-basedark rounded-2xl self-stretch flex flex-col items-center pt-2 pb-3 shadow-sm  justify-between overflow-y-auto gap-y-3">
+            <div className="bg-primoryop p-3 rounded-xl mt-6">
              <img src={logo} alt="Logo" />
             </div>
             <nav className="flex flex-col">

@@ -136,6 +136,30 @@
   border-radius: 9999px;
 }
 
+.nav-active{
+  display: inline-block;
+}
+.nav-active::before{
+  content: "";
+  background-image: url(../src/assets/img/topactive.svg);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  left: calc(100% - 12px);
+  top: 10px;
+}
+
+.nav-active::after{
+  content: "";
+  background-image: url(../src/assets/img/bottomactive.svg);
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  position: relative;
+  left: calc(100% - 12px);
+  bottom: 4px;
+}
 
 :root {
     --color-basedark: #1F1D2B;
@@ -161,7 +185,7 @@
 @layer utilities {
 
   .nav-active .bgroundnav {
-    @apply bg-bgnavitemgr overflow-visible bg-no-repeat bg-right relative left-1 bg-contain;
+    @apply bg-bacdark overflow-visible;
   }
 
   .nav-active .container-active{
