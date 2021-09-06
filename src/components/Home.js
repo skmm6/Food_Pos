@@ -5,6 +5,7 @@ import 'react-tabs/style/react-tabs.css';
 import Dishсard from './Dishсard'
 import Dropdown from 'react-dropdown';
 import '../css/react-dropdown.css';
+import Items from './Items';
 
 
 const options = [
@@ -260,10 +261,24 @@ export default function Home() {
             </div>
             <div className=" min-w-409 flex flex-col basedark p-6 bg-basedark rounded-l-md">
                 <h1 className=" mb-8  text-xl font-semibold leading-10">Orders #34562</h1>   
-                <div className="flex gap-x-2">
+                <div className="flex gap-x-2 mb-7">
                     <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5 bg-navitem text-white rounded-lg flex justify-center items-center">Dine In</button>
                     <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5  text-navitem border-solid border border-input-gray rounded-lg flex justify-center items-center">To Go</button>
                     <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5  text-navitem border-solid border border-input-gray rounded-lg flex justify-center items-center">Delivery</button>
+                </div>
+                <div className=" flex pb-6 border-b border-input-gray"> 
+                    <h5 className=" text-base font-semibold leading-6 flex-grow">
+                        Item
+                    </h5>
+                    <h5 className=" text-base font-semibold leading-6 mr-11">
+                        Qty
+                    </h5>
+                    <h5 className=" text-base font-semibold leading-6">
+                        Price
+                    </h5>
+                </div>
+                <div className=" mt-6">
+                    <Items />
                 </div>
             </div>
         </div>

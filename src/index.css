@@ -157,8 +157,8 @@
   height: 16px;
   display: inline-block;
   position: relative;
-  left: calc(100% - 12px);
-  bottom: 4px;
+  left: calc(100% - 14px);
+  bottom: 3px;
 }
 
 :root {
