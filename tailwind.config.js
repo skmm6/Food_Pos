@@ -26,6 +26,8 @@ module.exports = {
         't-gray': '#E0E6E9',
         'in-gray': '#2D303E',
         't-2-gray': '#ABBBC2',
+        'red': '#FF7CA3',
+        'fafafa': '#FAFAFA',
       },
       backgroundImage: theme => ({
         'bgnavitem': "url('./assets/img/Pattern.png')",
@@ -50,9 +52,12 @@ module.exports = {
         'secondary': '#ffed4a',
         'danger': '#e3342f',
         'input-gray': "#393C49",
+        'navitem': '#EA7C69',
+        'red': '#FF7CA3',
        }),
        height: {
         xxxxxl: '650px',
+        h454: '454px',
        },
        minWidth: {
         '192': '192px',

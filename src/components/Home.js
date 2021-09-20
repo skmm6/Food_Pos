@@ -277,8 +277,23 @@ export default function Home() {
                         Price
                     </h5>
                 </div>
-                <div className=" mt-6">
+                <div className=" mt-6 flex flex-col gap-y-4 overflow-y-auto notscrollbar h-h454">
                     <Items />
+                    <Items />
+                    <Items />
+                    <Items />
+                    <Items />
+                    <Items />
+                    <Items />
+                </div>
+                <div className="flex flex-col gap-y-4 pt-6 border-t border-input-gray flex-grow">
+                    <div className="flex justify-between text-t-2-gray text-sm">
+                      Discount <span className=" font-medium text-white">$0</span>
+                    </div>
+                    <div className="flex justify-between text-t-2-gray text-sm">
+                     Sub total <span className=" font-medium text-white">$ 21,03</span>
+                    </div>
+                    <button className=" mt-auto text-sm font-semibold leading-5 text-fafafa bg-navitem shadow-itemnav rounded-lg pt-4 pb-4">Continue to Payment</button>
                 </div>
             </div>
         </div>
