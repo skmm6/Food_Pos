@@ -1,5 +1,5 @@
 import React from 'react'
-import slideImg1 from '../assets/img/Image1.png';
+import slideImg1 from '../../assets/img/Image1.png';
 
 export default function Dishсard() {
     return (

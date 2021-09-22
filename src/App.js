@@ -1,4 +1,4 @@
-import Nav from './components/nav'
+import Nav from './components/navbar/nav'
 import {BrowserRouter, Route, Switch} from 'react-router-dom'
 import Home from './components/Home';
 import Discount from './components/Discount';

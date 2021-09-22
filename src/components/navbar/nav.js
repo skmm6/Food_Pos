@@ -1,6 +1,6 @@
 import React from 'react'
 import NavItem from './Navitem'
-import logo from '../assets/img/logo.svg'
+import logo from '../../assets/img/logo.svg'
 import {NavLink} from 'react-router-dom'
 
 

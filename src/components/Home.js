@@ -2,10 +2,10 @@ import React from 'react'
 import search from '../assets/img/Base.svg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import Dishсard from './Dishсard'
+import Dishсard from './items/Dishсard'
 import Dropdown from 'react-dropdown';
 import '../css/react-dropdown.css';
-import Items from './Items';
+import Items from './items/Items';
 
 
 const options = [

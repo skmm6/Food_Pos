@@ -1,5 +1,5 @@
 import React from 'react'
-import Home_corz from '../assets/img/home_corz.png';
+import Home_corz from '../../assets/img/home_corz.png';
 
 export default function Items() {
     return (
