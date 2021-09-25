@@ -7,8 +7,9 @@ import Message from './components/Message';
 import Notification from './components/Notification';
 import Setting from './components/Setting';
 import Notfound from './components/Notfound';
+import Login from './components/Login';
 
-function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div className="  m-auto bg-bacdark rounded-2xl flex h-screen  overflow-hidden">
@@ -20,6 +21,7 @@ function App() {
               <Route path='/message' component={Message}/>
               <Route path='/notification' component={Notification}/>
               <Route path='/setting' component={Setting}/>
+              <Route path='/login' component={Login}/>
               <Route path='*' component={Notfound}/>
           </Switch>
       </div> 

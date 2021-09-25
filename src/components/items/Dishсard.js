@@ -15,7 +15,7 @@ export default function Dishсard() {
                 <h4 className=" text-t-2-gray mt-2 transform -translate-y-4 text-sm font-normal w-36 text-center leading-5">
                      20 Bowls available
                 </h4>
-
+                
             </div>
         </div>
     )

@@ -19,7 +19,7 @@ function nav() {
                 <NavLink  activeClassName="nav-active" to="/notification"> <NavItem icon="icon-notification nav-icon"/> </NavLink>
                 <NavLink  activeClassName="nav-active" to="/setting"> <NavItem icon="icon-setting nav-icon"/> </NavLink>
              </nav>
-          <button className="mt-6"><NavItem icon="icon-log-out nav-icon"/></button>
+             <NavLink  activeClassName="nav-active" to="/login"> <NavItem icon="icon-log-out nav-icon"/> </NavLink>
            
            
             

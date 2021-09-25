@@ -8,13 +8,13 @@ import '../css/react-dropdown.css';
 import Items from './items/Items';
 
 
-const options = [
-    'Dine In', 'To Go', 'Delivery',
-  ];
-
-const defaultOption = options[0];
-
-export default function Home() {
+const Home = () => {
+    const options = [
+        'Dine In', 'To Go', 'Delivery',
+      ];
+    
+    const defaultOption = options[0];
+    
     return (
         <div className=" flex text-white flex-grow">
             <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
@@ -299,3 +299,5 @@ export default function Home() {
         </div>
     )
 }
+
+export default Home;
