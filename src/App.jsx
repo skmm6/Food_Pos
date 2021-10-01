@@ -12,7 +12,7 @@ import Login from './components/Login';
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="  m-auto bg-bacdark rounded-2xl flex h-screen  overflow-hidden">
+      <div className="m-auto bg-bacdark rounded-2xl flex h-screen  overflow-hidden">
           <Nav/>
           <Switch>
               <Route exact path='/' component={Home}/>
