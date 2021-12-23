@@ -8,7 +8,12 @@ import '../css/react-dropdown.css';
 import Items from './items/Items';
 
 
+
+
 const Home = () => {
+
+
+
     const options = [
         'Dine In', 'To Go', 'Delivery',
       ];
@@ -54,37 +59,7 @@ const Home = () => {
                         <Dropdown options={options}  value={defaultOption} />
                    </div>
                     <TabPanel>
-                        <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">
                          <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                        </div>
                     </TabPanel>    
                     
                     <TabPanel className="">
