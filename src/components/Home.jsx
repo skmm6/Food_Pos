@@ -1,4 +1,3 @@
-import React from 'react'
 import search from '../assets/img/Base.svg'
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
@@ -6,6 +5,10 @@ import Dishсard from './items/Dishсard'
 import Dropdown from 'react-dropdown';
 import '../css/react-dropdown.css';
 import Items from './items/Items';
+import React, { useEffect} from "react";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setFoods } from "../redux/actions/foodsActions";
 
 
 
@@ -20,6 +23,26 @@ const Home = () => {
     
     const defaultOption = options[0];
     
+
+    const foods = useSelector((state) => state.allFoods.foods);
+    const dispatch = useDispatch();
+    const fetchFoods = async () => {
+        const response = await axios
+        .get("http://localhost:1337/foods")
+        .catch((err) => {
+            console.log("Err: ", err);
+        });
+        dispatch(setFoods(response.data));
+    };
+    
+    useEffect(() => {
+        fetchFoods();
+    }, []);
+    
+    console.log("Foods :", foods);    
+
+
+
     return (
         <div className=" flex text-white flex-grow">
             <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
@@ -59,7 +82,9 @@ const Home = () => {
                         <Dropdown options={options}  value={defaultOption} />
                    </div>
                     <TabPanel>
-                         <Dishсard/>
+                            <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">    
+                                        <Dishсard/>
+                            </div>
                     </TabPanel>    
                     
                     <TabPanel className="">
