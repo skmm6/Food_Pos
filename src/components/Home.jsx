@@ -37,7 +37,7 @@ const Home = () => {
     
     useEffect(() => {
         fetchFoods();
-    }, []);
+    });
     
     console.log("Foods :", foods);    
 
@@ -90,33 +90,11 @@ const Home = () => {
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel className="">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
                         </div>
                     </TabPanel>
@@ -124,135 +102,11 @@ const Home = () => {
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                        </div>
-                    </TabPanel>
-
-                    <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                        </div>
-                    </TabPanel>
-
-                    <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
                          <Dishсard/>
                         </div>
                     </TabPanel>
