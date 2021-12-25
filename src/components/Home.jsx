@@ -1,5 +1,5 @@
 import search from '../assets/img/Base.svg'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Dishсard from './items/Dishсard'
 import Dropdown from 'react-dropdown';
@@ -8,7 +8,9 @@ import Items from './items/Items';
 import React, { useEffect} from "react";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
-import { setFoods } from "../redux/actions/foodsActions";
+import { setProducts } from "../redux/actions/productsActions";
+// import TabListing from './items/TabListing'
+
 
 
 
@@ -24,25 +26,23 @@ const Home = () => {
     const defaultOption = options[0];
     
 
-    const foods = useSelector((state) => state.allFoods.foods);
+
+
+    const products = useSelector((state) => state.allProducts.products);
     const dispatch = useDispatch();
-    const fetchFoods = async () => {
-        const response = await axios
+    const fetchProducts = async () => {
+      const response = await axios
         .get("http://localhost:1337/foods")
         .catch((err) => {
-            console.log("Err: ", err);
+          console.log("Err: ", err);
         });
-        dispatch(setFoods(response.data));
+      dispatch(setProducts(response.data));
     };
-    
+  
     useEffect(() => {
-        fetchFoods();
-    });
-    
-    console.log("Foods :", foods);    
-
-
-
+      fetchProducts();
+    }, []);
+    console.log("Products :", products);
     return (
         <div className=" flex text-white flex-grow">
             <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
@@ -68,13 +68,14 @@ const Home = () => {
                 <div>
                 <Tabs>
                     <TabList>
-                        <Tab>Hot Dishes</Tab>
-                        <Tab>Cold Dishes</Tab>
-                        <Tab>Soup</Tab>
-                        <Tab>Grill</Tab>
-                        <Tab>Appetizer</Tab>
-                        <Tab>Dessert</Tab>  
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
                     </TabList>
+
                    <div className="flex  justify-between">
                         <h3 className=" text-xl font-semibold leading-10 mb-10">
                                 Choose Dishes
@@ -109,6 +110,11 @@ const Home = () => {
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
                         </div>
+                    </TabPanel>
+                    <TabPanel className="">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                         <Dishсard/>
+                        </div>  
                     </TabPanel>
                 </Tabs>
                 </div>
