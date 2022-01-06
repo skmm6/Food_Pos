@@ -1,20 +1,48 @@
-import React from 'react'
 import search from '../assets/img/Base.svg'
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import {Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Dishсard from './items/Dishсard'
 import Dropdown from 'react-dropdown';
 import '../css/react-dropdown.css';
 import Items from './items/Items';
+import React, { useEffect} from "react";
+import axios from "axios";
+import { useDispatch, useSelector } from "react-redux";
+import { setProducts } from "../redux/actions/productsActions";
+// import TabListing from './items/TabListing'
+
+
+
 
 
 const Home = () => {
+
+
+
     const options = [
         'Dine In', 'To Go', 'Delivery',
       ];
     
     const defaultOption = options[0];
     
+
+
+
+    const products = useSelector((state) => state.allProducts.products);
+    const dispatch = useDispatch();
+    const fetchProducts = async () => {
+      const response = await axios
+        .get("http://localhost:1337/foods")
+        .catch((err) => {
+          console.log("Err: ", err);
+        });
+      dispatch(setProducts(response.data));
+    };
+  
+    useEffect(() => {
+      fetchProducts();
+    }, []);
+    console.log("Products :", products);
     return (
         <div className=" flex text-white flex-grow">
             <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
@@ -40,13 +68,14 @@ const Home = () => {
                 <div>
                 <Tabs>
                     <TabList>
-                        <Tab>Hot Dishes</Tab>
-                        <Tab>Cold Dishes</Tab>
-                        <Tab>Soup</Tab>
-                        <Tab>Grill</Tab>
-                        <Tab>Appetizer</Tab>
-                        <Tab>Dessert</Tab>  
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
+                        <Tab>___1___</Tab>
                     </TabList>
+
                    <div className="flex  justify-between">
                         <h3 className=" text-xl font-semibold leading-10 mb-10">
                                 Choose Dishes
@@ -54,69 +83,19 @@ const Home = () => {
                         <Dropdown options={options}  value={defaultOption} />
                    </div>
                     <TabPanel>
-                        <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                        </div>
+                            <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">    
+                                        <Dishсard/>
+                            </div>
                     </TabPanel>    
                     
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
+                        </div>
+                    </TabPanel>
+
+                    <TabPanel className="">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
                         </div>
                     </TabPanel>
@@ -124,137 +103,18 @@ const Home = () => {
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
                         </div>
                     </TabPanel>
-
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                        </div>
-                    </TabPanel>
-
-                    <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                         <Dishсard/>
-                        </div>
+                        </div>  
                     </TabPanel>
                 </Tabs>
                 </div>
