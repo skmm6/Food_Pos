@@ -1,83 +1,120 @@
 import React from 'react'
-import { Tab, TabPanel, Tabs, TabList } from "react-web-tabs";
-import ReactDOM from "react-dom";
-import 'react-web-tabs/dist/react-web-tabs.css'
-import PMC from './items/PMC';
+import { Tab, TabPanel, Tabs, TabList } from "react-tabs";
+import 'react-tabs/style/react-tabs.css';
+import Dishсard from './items/Dishсard'
+import Modal from './items/Modal/Modal';
 
 
 
 
-const Setting = ()  => {
-    return (
-        <div className=" flex text-white flex-grow ">
-            <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
-                <div className="flex">
-                    <h1 className="text-3xl font-semibold leading-10">
-                        Settings
-                    </h1>
+
+const Setting = () => {
+return (
+<div className=" flex text-white   bg-bacdark p-6 pb-0   ">
+
+    <div className="flex flex-col  ">
+        <h1 className="text-3xl font-semibold leading-10">
+            Settings
+        </h1>
+        <div className=' flex justify-between flex-col h-screen w-screen bg-basedark  rounded-lg m-2 border-black max-w-3xl '>
+            <h1 className='text-xl font-semibold leading-10 pt-6 pl-6 font-sans'>
+                Products Managment
+            </h1>
+            <Tabs>
+                <div className=' flex pl-6'>
+                <TabList>
+                    <Tab>Hot Dishes</Tab>
+                    <Tab>Cold Dishes</Tab>
+                    <Tab>Soup</Tab>
+                    <Tab>Grill</Tab>
+                    <Tab>Appetizer</Tab>
+                    <Tab>Dessert</Tab>
+                </TabList>
                 </div>
-                <div className=" p-6 ">
-            
-                    <Tabs defaultTab="vertical-tab-one" vertical className="vertical-tabs">
-                        <div className="flex flex-col w-72 h-xxxxxl bg-basedark mr-6 rounded-lg text-base font-medium leading-10">
-                        <TabList>
-                            <Tab tabFor="vertical-tab-one"> 
-                                 <a className="icon-appereance ">Appereance</a>
-                                 <h4 className=" text-sm leading-6 text-gray-400 font-normal">Dark and Light mode, Font size</h4>
-                             </Tab>
-                            <Tab tabFor="vertical-tab-two">
-                                <a className="icon-restaurant"> Your Restaurant</a>
-                                <h4 className=" text-sm leading-6 text-gray-400 font-normal">Dark and Light mode, Font size</h4>
-                            </Tab>
-                            <Tab tabFor="vertical-tab-three">
-                                <a className="icon-discount">Products Management</a>
-                                <h4 className=" text-sm leading-6 text-gray-400 font-normal">Manage your product, pricing, etc</h4>
-                            </Tab>
-                            <Tab tabFor="vertical-tab-four">
-                                <a className="icon-notification">Notifications</a>
-                                <h4 className=" text-sm leading-6 text-gray-400 font-normal">Customize your notifications</h4>
-                            </Tab>
-                            <Tab tabFor="vertical-tab-five">
-                                <a className="icon-security">Security</a>
-                                <h4 className=" text-sm leading-6 text-gray-400 font-normal">Configure Password, PIN, etc</h4>
-                            </Tab>
-                            <Tab tabFor="vertical-tab-six">
-                                <a className="icon-about-us">About Us</a>
-                                <h4 className=" text-sm leading-6 text-gray-400 font-normal">Find out more about Posly</h4>
-                            </Tab>
-                        </TabList>
+                
+
+                <TabPanel>
+                    const [modalActive, setModalActive] = useState (true)
+                    <div
+                        className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start ">
+                        <div className=' w-48 h-72  bg-basedark ml-3.5 pt-0 rounded-2xl flex flex-col justify-center items-center content-center overflow-visible  border-2 border-dashed border-danger mt-0'>
+                            <button className='flex text-base flex-col items-center p-3 border-dashed' onClick={() => setModalActive(true)}>
+                                
+                              <div className="icon-plus border rounded border-solid text-2xl     border-danger "></div>
+                                Add new dish
+                                <Modal active={modalActive} setActive={setModalActive} />
+                            </button>
                         </div>
-                    
-                    <TabPanel tabId="vertical-tab-one">
-                         <p>Tab 1 content</p>
-                     </TabPanel>
+                        <div className='flex flex-col '>
+                        <Dishсard />
+                        <button>
+                            Edit dish
+                        </button>
+                        </div>
+                        <Dishсard />
+                        <Dishсard />
+                        <Dishсard />
+                        <Dishсard />
 
-                     <TabPanel tabId="vertical-tab-two">
-                         <p>Tab content</p>
-                     </TabPanel>
+                    </div>
+                </TabPanel>
 
-                     <TabPanel tabId="vertical-tab-three">
-                         <p> 
-                            <PMC/> 
-                         </p>
-                     </TabPanel>
-                
-                     <TabPanel tabId="vertical-tab-four">
-                          <p>Tab 4 content</p>
-                    </TabPanel>
-                
-                     <TabPanel tabId="vertical-tab-five">
-                          <p>Tab 5 content</p>
-                    </TabPanel>
+                <TabPanel className="">
+                    <div
+                        className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                        <Dishсard />
+                        <Dishсard />
+                        <Dishсard />
+                        
+                    </div>
+                </TabPanel>
 
-                    <TabPanel tabId="vertical-tab-six">
-                          <p>Tab 6 content</p>
-                     </TabPanel>
-                 </Tabs>
-                </div>
-            </div>
+                <TabPanel className="">
+                    <div
+                        className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                        <Dishсard />
+                        <Dishсard />
+                        <Dishсard />
+                       
+                    </div>
+                </TabPanel>
+
+                <TabPanel className="">
+                    <div
+                        className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                        <Dishсard />
+                        <Dishсard />
+                        <Dishсard />
+                        
+                    </div>
+                </TabPanel>
+
+                <TabPanel className="">
+                    <div
+                        className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                        <Dishсard />
+                        <Dishсard />
+                        <Dishсard />
+                       
+                    </div>
+                </TabPanel>
+
+                <TabPanel className="">
+                    <div
+                        className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                        <Dishсard />
+                        <Dishсard />
+                        <Dishсard />
+                        
+
+                    </div>
+                </TabPanel>
+            </Tabs>
+
         </div>
-    )
+    </div>
+</div>
+)
 }
 
 export default Setting;
