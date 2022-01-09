@@ -5,8 +5,8 @@ import Dishсard from './items/Dishсard'
 import Dropdown from 'react-dropdown';
 import '../css/react-dropdown.css';
 import Items from './items/Items';
-import React, {useState, useEffect} from "react";
-import axios from 'axios';
+// import React, {useState, useEffect} from "react";
+// import axios from 'axios';
 
 
 
@@ -15,21 +15,6 @@ import axios from 'axios';
 
 
 const Home = () => {
-
-    const [foods, setFoods] = useState([])
-
-    useEffect(() => {
-        axios
-        .get('http://localhost:1337/foods')
-        .then(res =>{
-            console.log(res);
-            setFoods(res.data)
-        })
-        .catch(err => {
-            console.log(err);
-        })
-    },{})
-    console.log(foods);
    
 
     const options = [
@@ -80,10 +65,10 @@ const Home = () => {
                         <Dropdown options={options}  value={defaultOption} />
                    </div>
                     <TabPanel>
-                            <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">
-                                            <Dishсard props={{foods}}/>
+                            
+                                            <Dishсard />
                                        
-                            </div>
+                           
                     </TabPanel>    
                     
                     <TabPanel className="">
