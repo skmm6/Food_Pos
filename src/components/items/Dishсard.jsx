@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 
 export default function Dishсard() {
     
+    const [category, setCategory] = useState([])
     const [foods, setFoods] = useState([])
 
     useEffect(() => {
@@ -10,20 +11,28 @@ export default function Dishсard() {
         .get('http://localhost:1337/Categories/1')
         .then(res =>{
             console.log(res);
-            setFoods(res.data)
+            setCategory(res.data)
         })
         .catch(err => {
             console.log(err);
         })
     }, [])
 
-    const allFoods = foods.foods
+    if (category.length > 0) {
+        setFoods([foods] = category.foods)
+        console.log(foods);
+    }
     
-    console.log(allFoods);
+    
+
+
+
+    
+ 
 
     return (
         <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">
-               {allFoods.length > 0  && allFoods.map(food => (
+               {foods.length > 0 && foods.map(food => (
                     <div key={food.id} className="inline-block min-w-192">
                     <div className=" mt-9 bg-basedark pl-7 pr-7 pb-2 pt-0 rounded-2xl flex flex-col justify-center items-center content-center overflow-visible">
                         <img className=" w-36   transform -translate-y-9" src={('http://localhost:1337')+food.image.url} alt="image1" />
