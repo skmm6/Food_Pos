@@ -1,20 +1,17 @@
-import React from 'react'
-<<<<<<< HEAD
+import React, { useState } from 'react';
 import { Tab, TabPanel, Tabs, TabList } from "react-tabs";
 import 'react-tabs/style/react-tabs.css';
 import Dishсard from './items/Dishсard'
-import Modal from './items/Modal/Modal';
-=======
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-// import PMC from './items/PMC';
->>>>>>> 7939c00ab6695f43629bd2a6222ca24e3c2605cd
+import Modal from './items/Modal/Modal.jsx';
 
 
 
 
-<<<<<<< HEAD
+
+
 
 const Setting = () => {
+    const [modalActive, setModalActive] = useState (true)
 return (
 <div className=" flex text-white   bg-bacdark p-6 pb-0   ">
 
@@ -36,22 +33,11 @@ return (
                     <Tab>Appetizer</Tab>
                     <Tab>Dessert</Tab>
                 </TabList>
-=======
-const Setting = ()  => {
-    return (
-        <div className=" flex text-white flex-grow ">
-            {/* <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
-                <div className="flex">
-                    <h1 className="text-3xl font-semibold leading-10">
-                        Settings
-                    </h1>
->>>>>>> 7939c00ab6695f43629bd2a6222ca24e3c2605cd
                 </div>
                 
-<<<<<<< HEAD
 
                 <TabPanel>
-                    const [modalActive, setModalActive] = useState (true)
+                    
                     <div
                         className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start ">
                         <div className=' w-48 h-72  bg-basedark ml-3.5 pt-0 rounded-2xl flex flex-col justify-center items-center content-center overflow-visible  border-2 border-dashed border-danger mt-0'>
@@ -128,18 +114,6 @@ const Setting = ()  => {
                 </TabPanel>
             </Tabs>
 
-=======
-                     <TabPanel tabId="vertical-tab-five">
-                          <p>Tab 5 content</p>
-                    </TabPanel>
-
-                    <TabPanel tabId="vertical-tab-six">
-                          <p>Tab 6 content</p>
-                     </TabPanel>
-                 </Tabs>
-                </div>
-            </div> */}
->>>>>>> 7939c00ab6695f43629bd2a6222ca24e3c2605cd
         </div>
     </div>
 </div>

@@ -5,11 +5,10 @@ import Dishсard from './items/Dishсard'
 import Dropdown from 'react-dropdown';
 import '../css/react-dropdown.css';
 import Items from './items/Items';
-import React, { useEffect} from "react";
-import axios from "axios";
-import { useDispatch, useSelector } from "react-redux";
-import { setProducts } from "../redux/actions/productsActions";
-// import TabListing from './items/TabListing'
+import React, {useState, useEffect} from "react";
+import axios from 'axios';
+
+
 
 
 
@@ -17,7 +16,21 @@ import { setProducts } from "../redux/actions/productsActions";
 
 const Home = () => {
 
+    const [foods, setFoods] = useState([])
 
+    useEffect(() => {
+        axios
+        .get('http://localhost:1337/foods')
+        .then(res =>{
+            console.log(res);
+            setFoods(res.data)
+        })
+        .catch(err => {
+            console.log(err);
+        })
+    },{})
+    console.log(foods);
+   
 
     const options = [
         'Dine In', 'To Go', 'Delivery',
@@ -27,22 +40,6 @@ const Home = () => {
     
 
 
-
-    const products = useSelector((state) => state.allProducts.products);
-    const dispatch = useDispatch();
-    const fetchProducts = async () => {
-      const response = await axios
-        .get("http://localhost:1337/foods")
-        .catch((err) => {
-          console.log("Err: ", err);
-        });
-      dispatch(setProducts(response.data));
-    };
-  
-    useEffect(() => {
-      fetchProducts();
-    }, []);
-    console.log("Products :", products);
     return (
         <div className=" flex text-white flex-grow">
             <div className="w-full flex bg-bacdark p-6 pb-0 flex-grow flex-col">
@@ -68,12 +65,12 @@ const Home = () => {
                 <div>
                 <Tabs>
                     <TabList>
-                        <Tab>___1___</Tab>
-                        <Tab>___1___</Tab>
-                        <Tab>___1___</Tab>
-                        <Tab>___1___</Tab>
-                        <Tab>___1___</Tab>
-                        <Tab>___1___</Tab>
+                        <Tab>Hot Dishes</Tab>
+                        <Tab>Cold Dishes</Tab>
+                        <Tab>Soup</Tab>
+                        <Tab>Grill</Tab>
+                        <Tab>Appetizer</Tab>
+                        <Tab>Dessert</Tab>
                     </TabList>
 
                    <div className="flex  justify-between">
@@ -83,8 +80,9 @@ const Home = () => {
                         <Dropdown options={options}  value={defaultOption} />
                    </div>
                     <TabPanel>
-                            <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">    
-                                        <Dishсard/>
+                            <div className="overflow-auto notscrollbar flex flex-wrap min-w-min h-xxxxxl mt-0 mb-0 gap-x-7 gap-y-7 items-start justify-center">
+                                            <Dishсard props={{foods}}/>
+                                       
                             </div>
                     </TabPanel>    
                     
