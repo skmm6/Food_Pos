@@ -66,7 +66,7 @@ const Home = () => {
                    </div>
                     <TabPanel>
                             
-                                            <Dishсard />
+                    <Dishсard />
                                        
                            
                     </TabPanel>    
