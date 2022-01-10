@@ -2,7 +2,7 @@ import search from '../assets/img/Base.svg'
 import {Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Dishсard from './items/Dishсard'
-import Dropdown from 'react-dropdown';
+// import Dropdown from 'react-dropdown';
 import '../css/react-dropdown.css';
 import Items from './items/Items';
 // import React, {useState, useEffect} from "react";
@@ -17,11 +17,11 @@ import Items from './items/Items';
 const Home = () => {
    
 
-    const options = [
-        'Dine In', 'To Go', 'Delivery',
-      ];
+    // const options = [
+    //     'Dine In', 'To Go', 'Delivery',
+    //   ];
     
-    const defaultOption = options[0];
+    // const defaultOption = options[0];
     
 
 
@@ -62,41 +62,40 @@ const Home = () => {
                         <h3 className=" text-xl font-semibold leading-10 mb-10">
                                 Choose Dishes
                         </h3>
-                        <Dropdown options={options}  value={defaultOption} />
+                        {/* <Dropdown options={options}  value={defaultOption} /> */}
                    </div>
                     <TabPanel>
-                            
-                    <Dishсard />
-                                       
-                           
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                        <Dishсard idCateg={'1'}/> 
+                    </div>  
                     </TabPanel>    
                     
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
+                    <Dishсard idCateg={'2'}/>  
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
+                        <Dishсard idCateg={'3'}/>  
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
+                         <Dishсard idCateg={'4'}/>  
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
+                         <Dishсard idCateg={'5'}/>  
                         </div>
                     </TabPanel>
                     <TabPanel className="">
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
-                         <Dishсard/>
+                         <Dishсard idCateg={'6'}/>
                         </div>  
                     </TabPanel>
                 </Tabs>

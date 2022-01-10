@@ -1,14 +1,20 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 
-export default function Dishсard() {
+export default function Dishсard(props) {
     
+    let id = props.idCateg
+
+    let UrlAx = `http://localhost:1337/Categories/${id}`
+
     const [category, setCategory] = useState([])
     const [foods, setFoods] = useState([])
 
+    console.log(id)
+
     useEffect(() => {
         axios
-        .get('http://localhost:1337/Categories/1')
+        .get(UrlAx)
         .then(res =>{
             console.log(res);
             setCategory(res.data)
@@ -17,10 +23,8 @@ export default function Dishсard() {
         .catch(err => {
             console.log(err);
         })
-    }, [])
-
-    
-
+    }, [UrlAx])
+    console.log(category);
 
 
     
