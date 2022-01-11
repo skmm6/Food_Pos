@@ -8,8 +8,17 @@ import Notification from './components/Notification';
 import Setting from './components/Setting';
 import Notfound from './components/Notfound';
 import Login from './components/Login';
+import React, { useState } from 'react';
+
 
 const App = () => {
+  const [token, setToken] = useState();
+
+  
+  if(!token) {
+    return <Login setToken={setToken} />
+  }
+
   return (
     <BrowserRouter>
       <div className="m-auto bg-bacdark rounded-2xl flex h-screen  overflow-hidden">
@@ -20,7 +29,7 @@ const App = () => {
               <Route path='/dashboard' component={Dashboard}/>
               <Route path='/message' component={Message}/>
               <Route path='/notification' component={Notification}/>
-              <Route path='/setting' component={Setting}/>
+              { token && <Route path='/setting' component={Setting}/> }
               <Route path='/login' component={Login}/>
               <Route path='*' component={Notfound}/>
           </Switch>
