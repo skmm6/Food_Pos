@@ -13,10 +13,18 @@ async function loginUser(credentials) {
       .then(data => data.json())
    }
 
-const Login = ({ setToken }) => {
+const Login = () => {
+
+    const [token, setToken] = useState();
+
+  
+    if(!token) {
+      console.log(setToken);
+    }
     const [identifier, setUserName] = useState();
   const [password, setPassword] = useState();
 
+  
   
   const handleSubmit = async e => {
     e.preventDefault();
@@ -27,7 +35,7 @@ const Login = ({ setToken }) => {
     setToken(token);
     console.log(token);
   }
-
+  if(!token){
     return (
         <div className='h-screen flex  justify-center items-center flex-grow text-white'>
             <div className='w-full max-w-md m-auto bg-basedark rounded-lg shadow-xl py-10 px-16'>
@@ -68,7 +76,16 @@ const Login = ({ setToken }) => {
             </div>
         </div>
     );
+}else{
+    return(
+        <div>
+            ты залогинился
+        </div>
+    )
 }
+}     
+  
+
 
 Login.propTypes = {
     setToken: PropTypes.func.isRequired

@@ -12,12 +12,10 @@ import React, { useState } from 'react';
 
 
 const App = () => {
+
+
   const [token, setToken] = useState();
 
-  
-  if(!token) {
-    return <Login setToken={setToken} />
-  }
 
   return (
     <BrowserRouter>
