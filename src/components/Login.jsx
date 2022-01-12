@@ -14,17 +14,18 @@ async function loginUser(credentials) {
    }
 
 const Login = ({ setToken }) => {
-    const [username, setUserName] = useState();
+    const [identifier, setUserName] = useState();
   const [password, setPassword] = useState();
 
   
   const handleSubmit = async e => {
     e.preventDefault();
     const token = await loginUser({
-      username,
-      password
+        identifier,
+        password
     });
     setToken(token);
+    console.log(token);
   }
 
     return (
@@ -36,12 +37,12 @@ const Login = ({ setToken }) => {
 
                 <form onSubmit={handleSubmit}>
                     <div>
-                        <label htmlFor='email'>Email</label>
+                        <label htmlFor='text'>Login</label>
                         <input
-                            type='email'
+                            type='text'
                             className={`w-full p-2 text-gray-700 border rounded-md outline-none text-sm transition duration-150 ease-in-out mb-4`}
-                            id='email'
-                            placeholder='Your Email'
+                            id='login'
+                            placeholder='Your Login'
                             onChange={e => setUserName(e.target.value)}
                         />
                     </div>
