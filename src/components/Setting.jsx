@@ -129,7 +129,6 @@ return (
                         
                         {/* <Dropdown options={options}  value={defaultOption} /> */}
                    </div>
-
                     <TabPanel>
                     <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start ">
                         <Dishсard idCateg={'1'}/>  
