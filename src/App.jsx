@@ -14,7 +14,7 @@ import React, { useState } from 'react';
 const App = () => {
 
 
-  const [token, setToken] = useState();
+
 
 
   return (
@@ -27,7 +27,7 @@ const App = () => {
               <Route path='/dashboard' component={Dashboard}/>
               <Route path='/message' component={Message}/>
               <Route path='/notification' component={Notification}/>
-              { token && <Route path='/setting' component={Setting}/> }
+             <Route path='/setting' component={Setting}/> 
               <Route path='/login' component={Login}/>
               <Route path='*' component={Notfound}/>
           </Switch>

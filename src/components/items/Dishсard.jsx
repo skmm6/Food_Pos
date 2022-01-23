@@ -46,6 +46,9 @@ export default function Dishсard(props) {
                             <h4 className=" text-t-2-gray mt-2 transform -translate-y-4 text-sm font-normal w-36 text-center leading-5">
                                 {food.sum} Bowls available
                             </h4>
+                            <span className=' w-56 h-12 flex items-center justify-center border rounded-lg border-navitem text-navitem hover:border-red hover:text-red focus:border-red focus:text-red'>
+                        <i className="icon-edit"> Edit dish</i>
+                        </span>
                         </div>
                     </div>  
                ))}
