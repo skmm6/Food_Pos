@@ -26,11 +26,8 @@ const App = () => {
           <Switch>
               <Route exact path='/' component={Home}/>
               <Route path='/discount' component={Discount}/>
-              <Route path='/dashboard' component={Dashboard}/>
               <Route path='/message' component={Message}/>
               <Route path='/notification' component={Notification}/>
-             <Route path='/setting' component={Setting}/> 
-              <Route path='/login' component={Login}/>
               <Route path='*' component={Notfound}/>
           </Switch>
       </div> 

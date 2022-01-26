@@ -11,22 +11,15 @@ function nav() {
             <div className="bg-primoryop p-3 rounded-xl mt-6">
              <img src={logo} alt="Logo" />
             </div>
-            <nav className="flex flex-col">
+            <nav className="flex flex-col justify-around">
                 <NavLink exact to="/" activeClassName="nav-active"> <NavItem icon="icon-home nav-icon"/> </NavLink>  
                 <NavLink  activeClassName="nav-active" to="/discount"> <NavItem icon="icon-discount nav-icon"/> </NavLink>  
-                <NavLink  activeClassName="nav-active" to="/dashboard"> <NavItem icon="icon-dashboard nav-icon"/> </NavLink>
                 <NavLink  activeClassName="nav-active" to="/message"> <NavItem icon="icon-message nav-icon"/> </NavLink>
                 <NavLink  activeClassName="nav-active" to="/notification"> <NavItem icon="icon-notification nav-icon"/> </NavLink>
-                <NavLink  activeClassName="nav-active" to="/setting"> <NavItem icon="icon-setting nav-icon"/> </NavLink>
              </nav>
-             <NavLink  activeClassName="nav-active" to="/login"> <NavItem icon="icon-log-out nav-icon"/> </NavLink>
-           
-           
-            
-            
-           
-  
-  
+                <div className='h-2'>
+                    
+                </div>
         </div>
     )
 }

@@ -34,10 +34,10 @@ const Home = () => {
                 <div className="flex">
                     <div className=" flex-grow ">
                         <h3 className=" text-3xl font-semibold leading-10">
-                             Jaegar Resto
+                             Food Pos
                         </h3>
                         <h4 className=" text-base leading-6 text-t-gray font-normal">
-                             Tuesday, 2 Feb 2021
+                             Welcome
                         </h4>
                     </div>
                     {/* <div className="">
@@ -140,21 +140,21 @@ const Home = () => {
                     <div className="flex justify-between text-t-2-gray text-sm">
                      Sub total <span className=" font-medium text-white">
                          {
-                             ctx.getTotalSumm()
+                             ctx.getTotalSumm().toFixed(2)
                         } $
                      </span>
                     </div>
-                    <button className=" mt-auto text-sm font-semibold leading-5 text-fafafa bg-navitem shadow-itemnav rounded-lg pt-4 pb-4"
+                    <button className=" mt-auto text-sm font-semibold leading-5 text-fafafa bg-navitem hover:shadow-itemnav rounded-lg pt-4 pb-4"
                         onClick={() => setModalForm(true)}
                     >Continue to Payment</button>
                 </div>
             </div>
             {
                  modelForm && 
-                 <button className=' fixed overflow-auto left-0 top-0 w-full h-full bg-black bg-opacity-80 '
+                 <div className=' fixed overflow-auto left-0 top-0 w-full h-full bg-black bg-opacity-80 '
                  >
-                    <ModalForms/>
-                </button>
+                    <ModalForms state={modelForm}/>
+                </div>
             }
             
         </div>

@@ -63,7 +63,10 @@ module.exports = {
         '192': '192px',
         '104': '104px',
         '409': '409px',
-       }
+       },
+       maxWidth: {
+        '100': '100px',
+      }
     },
   },
   variants: {
