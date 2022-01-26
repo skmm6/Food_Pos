@@ -68,36 +68,36 @@ const Home = () => {
                         {/* <Dropdown options={options}  value={defaultOption} /> */}
                    </div>
                     <TabPanel>
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 justify-center items-start">
                         <Dishсard idCateg={'1'}/> 
                     </div>  
                     </TabPanel>    
                     
                     <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl justify-center h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                     <Dishсard idCateg={'2'}/>  
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl justify-center h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                         <Dishсard idCateg={'3'}/>  
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl justify-center h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard idCateg={'4'}/>  
                         </div>
                     </TabPanel>
 
                     <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl justify-center h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard idCateg={'5'}/>  
                         </div>
                     </TabPanel>
                     <TabPanel className="">
-                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
+                    <div className="overflow-auto notscrollbar flex flex-wrap max-w-7xl justify-center h-xxxxxl mt-0 mb-0 gap-x-5 gap-y-5 items-start">
                          <Dishсard idCateg={'6'}/>
                         </div>  
                     </TabPanel>
