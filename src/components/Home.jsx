@@ -105,7 +105,7 @@ const Home = () => {
                 </div>
             </div>
             <div className=" min-w-409 flex flex-col basedark p-6 bg-basedark rounded-l-md">
-                <h1 className=" mb-8  text-xl font-semibold leading-10">Orders</h1>   
+                <h1 className=" mb-8  text-xl font-semibold leading-10">Orders:</h1>   
                 {/* <div className="flex gap-x-2 mb-7">
                     <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5 bg-navitem text-white rounded-lg flex justify-center items-center">Dine In</button>
                     <button className=" pl-3 pr-3 pt-2 pb-2 text-sm font-semibold leading-5  text-navitem border-solid border border-input-gray rounded-lg flex justify-center items-center">To Go</button>
@@ -131,14 +131,14 @@ const Home = () => {
                 </div>
                 <div className="flex flex-col gap-y-4 pt-6 border-t border-input-gray flex-grow">
                     <div className="flex justify-between text-t-2-gray text-sm">
-                      Tota: <span className=" font-medium text-white">
+                      Total: <span className=" font-medium text-white">
                         {
                              ctx.getTotalQuantity()
                         }
                       </span>
                     </div>
                     <div className="flex justify-between text-t-2-gray text-sm">
-                     Sub total <span className=" font-medium text-white">
+                     Sub total: <span className=" font-medium text-white">
                          {
                              ctx.getTotalSumm().toFixed(2)
                         } $
